@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Acesse as melhores e mais confiáveis bancas de jogo do bicho e cassino no Vivi JB. Junte-se agora e aproveite!">
     <meta name="keywords" content="jogo do bicho, cassino online, banca confiável, Vivi JB, apostas online">
     <meta name="author" content="Vivi JB">
@@ -22,35 +22,69 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
             text-align: center;
+            overflow-x: hidden;
         }
         h1 {
             color: #333;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .btn-whatsapp:hover {
-            background-color: #20b354;
-        }
         .redirect-message {
             font-size: 1.1em;
             color: #555;
             margin-top: 20px;
+        }
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, transform 0.2s;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 120px;
+            text-align: center;
+        }
+        .btn-whatsapp:hover {
+            background-color: #20b354;
+            transform: scale(1.05);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .redirect-message {
+                font-size: 0.9em;
+            }
+            .btn-whatsapp {
+                padding: 8px 15px;
+                font-size: 0.8em;
+                min-width: 100px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        /* Ensure button visibility on smaller screens */
+        @media (max-height: 400px) {
+            .btn-whatsapp {
+                bottom: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
@@ -61,7 +95,7 @@
        class="btn-whatsapp" 
        target="_blank" 
        rel="noopener noreferrer">
-        Recomende esse site e ganhe prêmios
+        Recomende e ganhe
     </a>
 
     <!-- Auto-redirect script -->
